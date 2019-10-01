@@ -18,7 +18,7 @@ namespace CoinCounterClass.Tests
         [TestMethod]
         public void ChangeToCoins_TwentyFiveToQuarter_OneQuarter ()
         {
-          CoinCounter newCoins = new CoinCounter(78);
+          CoinCounter newCoins = new CoinCounter(79);
           newCoins.ConvertToCoins();
           Assert.AreEqual(newCoins.OutputQuarters , 3);       
         }
@@ -26,9 +26,15 @@ namespace CoinCounterClass.Tests
         [TestMethod]
         public void ChangeToCoins_TenToDime_OneDime ()
         {
-          CoinCounter newCoins = new CoinCounter(10);
+          CoinCounter newCoins = new CoinCounter(15);
           newCoins.ConvertToCoins();
-          Assert.AreEqual(newCoins.OutputQuarters , 3);       
+          Assert.AreEqual(newCoins.OutputDimes, 1);       
         }
+
+        // [TestMethod]
+        // public void ChangeToCoins_FiveToNickel_OneNickel ()
+        // {
+        //   CoinCounter = new CoinCounter(90)
+        // }
     }
 }
